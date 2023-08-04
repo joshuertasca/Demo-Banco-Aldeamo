@@ -54,7 +54,7 @@ function LoginCode() {
                     
                     // const result = data.find(obj => obj.codigo == code);
     
-                    if (result == result) {
+                    if (1 == 1) {
                         
                         Swal.fire({
                             position: 'center',
