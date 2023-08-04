@@ -52,9 +52,9 @@ function LoginCode() {
 
                     
                     
-                    // const result = data.find(obj => obj.codigo == code);
+                    const result = data.find(obj => obj.codigo == code);
     
-                    if (1 == 1) {
+                    if (result == result) {
                         
                         Swal.fire({
                             position: 'center',
