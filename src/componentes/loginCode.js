@@ -51,10 +51,18 @@ function LoginCode() {
                 .then(data => {
 
                     
+                    console.log(data)
                     
-                    const result = data.find(obj => obj.codigo == code);
-    
-                    if (result == result) {
+                    var result = 0
+
+                    for (let index = 0; index < data.length; index++) {
+                        if (data[index].codigo==code) {
+                            result=1
+                        }
+                        
+                    }
+
+                    if (result == 0) {
                         
                         Swal.fire({
                             position: 'center',
