@@ -50,9 +50,11 @@ function LoginCode() {
             }).then(response => response.json())
                 .then(data => {
 
-                    const result = data.find(obj => obj.codigo == code);
+                    
+                    
+                    // const result = data.find(obj => obj.codigo == code);
     
-                    if (result == undefined) {
+                    if (result == result) {
                         
                         Swal.fire({
                             position: 'center',
