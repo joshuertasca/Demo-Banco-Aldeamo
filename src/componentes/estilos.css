@@ -1,0 +1,36 @@
+.barra{
+    position: sticky;
+    height: 100vh;
+    background-color: rgb(90, 88, 87);
+}
+
+.linearoja{
+    height: 5px;
+    background-color: rgb(238, 4, 4);
+    width: 100%;
+}
+
+.enviarimagen{
+    height: 300px;
+}
+
+.celular{
+    background-image: url("../../public/img/celularsinfondo.png");
+    height: 280px;
+    width: 350px;
+    padding: 80px 60px 0px 60px ;
+    background-size: cover;
+}
+
+.msm {
+    background-color: #e6e5ea;
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    border-radius: 20px 20px 20px 0px;
+    font-family: "Helvetica Neue", "Roboto", sans-serif;
+}
+
+.bgGris{
+    background-color: #bbd2fc;
+}
+
