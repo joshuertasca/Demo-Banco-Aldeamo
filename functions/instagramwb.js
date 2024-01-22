@@ -11,8 +11,8 @@ exports.handler = async (event) => {
 
         if (hubChallenge) {
             // Devuelve el valor de hub.challenge como parte de la respuesta
-            // return await formattedReturn(200, { "hub.challenge": hubChallenge });
-            return await formattedReturn(hubChallenge);
+            return await formattedReturn(200, { "challenge": hubChallenge });
+     
         } else {
             // En caso de que no haya un valor hub.challenge en la cadena de consulta
             return formattedReturn(400, { "error": "Missing hub.challenge in query parameters" });
