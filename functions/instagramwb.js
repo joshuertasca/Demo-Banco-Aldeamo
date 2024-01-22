@@ -30,13 +30,7 @@ exports.handler = async (event) => {
     //     const evento = JSON.parse(event.body);
 
 
-    //     const bodyIngreso = {
-    //         "records": [{
-    //             "fields": {
-    //                 "Respuesta": JSON.stringify(evento),
-    //             }
-    //         }]
-    //     };
+    //     const bodyIngreso = evento;
     //     const EnviarAirtable = await fetch(process.env.REACT_APP_URL_AIRTABLE_EVENTOS_TELEGRAM, {
 
     //         method: 'POST',
