@@ -7,8 +7,15 @@ exports.handler = async (event) => {
 
     if (event.httpMethod === 'GET') {
 
-        return await formattedReturn(200, {"hub.challenge":1165157977});
-        // return await formattedReturn(1158201444);
+        const hubChallenge = event.queryStringParameters ? event.queryStringParameters['hub.challenge'] : null;
+
+        if (hubChallenge) {
+            // Devuelve el valor de hub.challenge como parte de la respuesta
+            return await formattedReturn(200, { "hub.challenge": hubChallenge });
+        } else {
+            // En caso de que no haya un valor hub.challenge en la cadena de consulta
+            return formattedReturn(400, { "error": "Missing hub.challenge in query parameters" });
+        }
 
     }
   
