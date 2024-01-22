@@ -7,7 +7,7 @@ exports.handler = async (event) => {
 
     if (event.httpMethod === 'GET') {
 
-        return await formattedReturn(200, {"hub.challenge":1158201444});
+        return await formattedReturn(200, {"hub.challenge":1165157977});
         // return await formattedReturn(1158201444);
 
     }
