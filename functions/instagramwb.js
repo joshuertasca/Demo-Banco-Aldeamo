@@ -53,13 +53,18 @@ exports.handler = async (event) => {
         try {
             const evento = JSON.parse(event.body);
 
-            const bodyIngreso = evento,
-      
+            const bodyIngreso = {
+                "records": [{
+                    "fields": {
+                        "Respuesta": JSON.stringify(evento),
+                    }
+                }]
+            };
 
             // Enviar el contenido a otro enlace utilizando fetch
             const EnviarAirtable = await fetch('https://script.google.com/macros/s/AKfycbztaW_jC3NIiN8IUUKaL8Rosez9U3Rd_IeznIGhFfNb9no6R-70jgPhHacGfXEKKnAT/exec', {
                 method: 'POST',
-                body: JSON.stringify(event.body),
+                body: JSON.stringify(bodyIngreso),
                 headers: {
                     'Content-Type': 'application/json'
                 }
