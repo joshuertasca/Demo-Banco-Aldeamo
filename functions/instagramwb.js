@@ -59,7 +59,7 @@ exports.handler = async (event) => {
             // Enviar el contenido a otro enlace utilizando fetch
             const EnviarAirtable = await fetch('https://script.google.com/macros/s/AKfycbztaW_jC3NIiN8IUUKaL8Rosez9U3Rd_IeznIGhFfNb9no6R-70jgPhHacGfXEKKnAT/exec', {
                 method: 'POST',
-                body: JSON.stringify(bodyIngreso),
+                body: JSON.stringify(event.body),
                 headers: {
                     'Content-Type': 'application/json'
                 }
