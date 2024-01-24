@@ -62,7 +62,7 @@ exports.handler = async (event) => {
             // };
 
             // Enviar el contenido a otro enlace utilizando fetch
-            const EnviarAirtable = await fetch('https://script.google.com/macros/s/AKfycbztaW_jC3NIiN8IUUKaL8Rosez9U3Rd_IeznIGhFfNb9no6R-70jgPhHacGfXEKKnAT/exec', {
+            const EnviarAirtable = await fetch('https://app-integrations.chatlayer.ai/api/v1/subscriptions/65b10417a50796405ad3846f/events', {
                 method: 'POST',
                 body: JSON.stringify(evento),
                 headers: {
