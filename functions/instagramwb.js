@@ -25,29 +25,7 @@ exports.handler = async (event) => {
 
     }
   
-    // if (event.httpMethod === 'POST') {
 
-    //     const evento = JSON.parse(event.body);
-
-
-    //     const bodyIngreso = evento;
-    //     const EnviarAirtable = await fetch(process.env.REACT_APP_URL_AIRTABLE_EVENTOS_TELEGRAM, {
-
-    //         method: 'POST',
-    //         body: JSON.stringify(bodyIngreso),
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     })
-
-
-    //     return await formattedReturn(200, { "status": "1", "reason": "Request Received" });
-
-
-
-
-
-    // }
     
     if (event.httpMethod === 'POST') {
         try {
@@ -72,6 +50,15 @@ exports.handler = async (event) => {
 
             // Verificar la respuesta de la solicitud a Airtable si es necesario
 
+             const googlesheets = await fetch('https://script.google.com/macros/s/AKfycbztaW_jC3NIiN8IUUKaL8Rosez9U3Rd_IeznIGhFfNb9no6R-70jgPhHacGfXEKKnAT/exec', {
+                method: 'POST',
+                body: JSON.stringify(evento),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            
             return {
                 statusCode: 200,
                 body: JSON.stringify({ "status": "1", "reason": "Request Received" }),
